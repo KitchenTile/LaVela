@@ -1,0 +1,97 @@
+.header-navBar {
+    list-style: none;
+    gap: 1.5em;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-navBar .item{
+    display: flex;
+    height: 100%;
+    font-weight: 400;
+    color: #96969a;
+    padding: 0.5em;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+
+}
+
+.header-navBar .item:hover{
+    color: #ffffff;
+}
+
+/* pseudo element for background color gradiant transition */
+
+.header-navBar .item::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: transparent;
+    z-index: -1;    
+    border-radius: 10% 10% 0 0;
+}
+
+.header-navBar .item:hover::before{
+    height: 100%;
+    background-color: #5a5a5a;
+    transition: height 0.3s ease-in-out;
+}
+/* -- */
+
+.header-navBar .item:hover .header-navBar-dropdown-wrapper{
+    transition: all 0.3s ease-in-out;
+    transform: scaleY(1);
+    height: 150px;
+}
+
+.header-navBar-dropdown-wrapper{
+    position: absolute;
+    top: calc(-2em + var(--header-height));
+    left: 0;
+    background-color: #5a5a5a;
+    width: 200px;
+    padding: 2em;
+    transform: scaleY(0);
+    transform-origin: top;
+    height: 0px;
+    cursor: auto;
+    border-radius: 0 5% 5% 5%;
+}
+
+.header-navBar-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: -0.5em;
+    padding-left: 1em;
+}
+
+.header-navBar-dropdown-item{
+    cursor: pointer;
+    color: #d8d8d8;
+}
+
+.header-navBar-dropdown-item:hover{
+    color: #ffffff;
+}
+
+/* By ID */
+
+#about-us{
+    min-width: 71px;
+    text-align: center;
+}
+
+#header-logo:hover {
+    filter: drop-shadow(white 1px 1px 10px);
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+}
