@@ -1,0 +1,22 @@
+.header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    height: var(--header-height);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 1em 2em;
+    list-style: none;
+    gap: 1.5em;
+}
+
+#magGlass {
+    position: absolute;
+    left: 1em;
+    top: 0.2em;
+}
