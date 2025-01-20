@@ -1,12 +1,15 @@
-import Carousel from "../components/main-page/carousel/Carousel"
+import Header from "../components/header/Header";
+import Hero from "../components/main-page/Hero/Hero";
+import Gallery from "../components/main-page/Hero/image-gallery/Gallery";
 
 const MainPage = () => {
-
   return (
     <>
-      <Carousel />
+      <Header />
+      <Hero />
+      <Gallery />
     </>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
