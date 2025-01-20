@@ -1,10 +1,12 @@
 .searchBar{
     display: flex;
-    width: auto;
+    width: 100%;
     height: 100%;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     position: relative;
     align-items: center;
+    background-color: transparent;
+    
 }
 
 .search-body{
@@ -13,12 +15,46 @@
 }
 
 .search-input{
-    border: 2px solid #707074;
+    border: none;
+    background-color: transparent;
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 400;
-    height: 2em;
-    padding: 0 1em 0 2.5em;
-    width: 100%;
+    height: 2.5em;
+    /* padding: 0 1em 0 2.5em; */
+    width: 5%;
     font-family: inherit;
+    float: right;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder{
+        color: transparent;
+    }
+
+    &:focus{
+        padding: 0 1em 0 2.5em;
+        width: 25%;
+        color: black;
+        text-decoration: underline;
+        border-bottom: none;
+        outline: none;
+
+        &::placeholder{
+            color: black;
+        }
+
+        & ~ #magGlass{
+            color: transparent;
+        }
+    }
+}
+
+#magGlass {
+    position: absolute;
+    font-size: 1.6em;
+    color: var(--LV-primary-blue);
+    right: 0.4em;
+    top: 0em;
+    z-index: -1;
 }

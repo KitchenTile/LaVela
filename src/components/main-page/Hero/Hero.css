@@ -1,0 +1,59 @@
+.hero-container{
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    background-color: #fbf0a7;
+}
+
+.text-container{
+    position: relative;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    z-index: 1;
+    padding: 5em 3em 5em 5em;
+    height: 100%;
+
+
+    & .hero-title{
+        font-family: "Lobster", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 130px;
+        transform: translateX(-1em);
+        color: #fbf0a7;
+        height: 500px;
+        white-space: nowrap;
+    }
+
+    & > div h2{
+        font-family: "Lato", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5em;
+    }
+
+    & .arrow{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0) scale(2.5);
+    }
+}
+
+
+
+#wave {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    right: -6em;
+}
+
+@media (min-width: 1800px) {
+    #wave {
+        right: 0em;
+    }
+  }

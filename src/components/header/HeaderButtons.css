@@ -12,16 +12,17 @@
     padding: 12px 16px 10px 12px;
     font-weight: 500;
     border-radius: 8px;
-    border: 1px solid;
-    background-color: #5a5a5a;
+    border: none;
+    background-color: var(--LV-primary-blue);
     font-family: inherit;
     min-width: 90px;
     cursor: pointer;
-    color: #d8d8d8;
+    color: var(--LV-primary-yellow);
     font-size: 1em;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn#signin:hover, .btn#signup:hover {
-    background-color: #96969a;
+    background-color: #527977;
 } 
