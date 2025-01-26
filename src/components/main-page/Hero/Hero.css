@@ -1,6 +1,6 @@
 .hero-container{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -9,34 +9,45 @@
 
 .text-container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-column-start: 9;
     grid-column-end: 13;
     z-index: 1;
-    padding: 5em 3em 5em 5em;
-    height: 100%;
+    /* padding: 5em 3em 5em 5em; */
+    height: 100vh;
 
 
     & .hero-title{
+        position: relative;
+        top: 5vh;
         font-family: "Lobster", serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 130px;
+        font-size: clamp(100px, 8.5vw, 200px);
         transform: translateX(-1em);
         color: #fbf0a7;
-        height: 500px;
+        /* height: 500px; */
         white-space: nowrap;
+    }
+
+    & > div{
+        position: relative;
+        bottom: 10%;
+        /* text-align: center; */
     }
 
     & > div h2{
         font-family: "Lato", serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 2.5em;
-    }
+        font-size: clamp(1.5rem, 2.5vw, 50px);
+        }
 
     & .arrow{
         position: absolute;
-        bottom: 100px;
+        bottom: -35%;
         left: 50%;
         transform: translate(-50%, 0) scale(2.5);
     }
