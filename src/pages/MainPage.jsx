@@ -1,6 +1,6 @@
 import Header from "../components/header/Header";
 import Hero from "../components/main-page/Hero/Hero";
-import Gallery from "../components/main-page/Hero/image-gallery/Gallery";
+import Gallery from "../components/main-page/image-gallery/Gallery";
 
 const MainPage = () => {
   return (
