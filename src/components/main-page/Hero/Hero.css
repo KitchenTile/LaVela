@@ -15,7 +15,6 @@
     grid-column-start: 9;
     grid-column-end: 13;
     z-index: 1;
-    /* padding: 5em 3em 5em 5em; */
     height: 100vh;
 
 
@@ -25,46 +24,43 @@
         font-family: "Lobster", serif;
         font-weight: 400;
         font-style: normal;
-        font-size: clamp(100px, 8.5vw, 200px);
-        transform: translateX(-1em);
+        font-size: clamp(60px, 8.5vw, 200px);
         color: #fbf0a7;
-        /* height: 500px; */
         white-space: nowrap;
+        width: fit-content;
     }
 
     & > div{
         position: relative;
         bottom: 10%;
-        /* text-align: center; */
+        text-align: center;
     }
 
     & > div h2{
         font-family: "Lato", serif;
         font-weight: 400;
         font-style: normal;
-        font-size: clamp(1.5rem, 2.5vw, 50px);
+        font-size: clamp(1rem, 2.5vw, 50px);
         }
 
     & .arrow{
         position: absolute;
-        bottom: -35%;
+        bottom: -8vh;
         left: 50%;
         transform: translate(-50%, 0) scale(2.5);
+
+        & > svg{
+            width: clamp(10px,1.6vw,24px);
+        }
     }
 }
-
 
 
 #wave {
     position: absolute;
     height: 100vh;
-    width: auto;
+    width: 50vw;
     overflow: hidden;
     right: -6em;
+    object-fit: cover;
 }
-
-@media (min-width: 1800px) {
-    #wave {
-        right: 0em;
-    }
-  }
