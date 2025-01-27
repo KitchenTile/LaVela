@@ -19,7 +19,7 @@
 
 #wave-repeat {
     position: absolute;
-    width: auto;
+    width: 50%;
     overflow: hidden;
     right: -6em;
 }
